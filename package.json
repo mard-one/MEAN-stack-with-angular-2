@@ -1,0 +1,23 @@
+{
+  "name": "mean-stack",
+  "version": "1.0.0",
+  "description": "\"# MEAN-stack-with-angular-2\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mard-one/MEAN-stack-with-angular-2.git"
+  },
+  "author": "Mardon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mard-one/MEAN-stack-with-angular-2/issues"
+  },
+  "homepage": "https://github.com/mard-one/MEAN-stack-with-angular-2#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "mongoose": "^4.11.1"
+  }
+}
