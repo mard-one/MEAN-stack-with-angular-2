@@ -12,9 +12,7 @@ let emailLengthChecker = (email) => {
     if (email.length < 5 || email.length > 30){
       return false;
     } else {
-      return true;
-
-    }
+      return true    }
   }
 };
 let validEmailChecker = (email) => {
@@ -32,9 +30,7 @@ let usernameLengthChecker = (username) => {
     if (username.length < 3 || username.length > 15){
       return false;
     } else {
-      return true;
-
-    }
+      return true;    }
   }
 };
 let validUsernameChecker = (username) => {
@@ -53,7 +49,6 @@ let passwordLengthChecker = (password) => {
       return false;
     } else {
       return true;
-
     }
   }
 };
@@ -100,6 +95,7 @@ const emailValidators = [
   }
 ];
 
+
 // Schema
 const userSchema = new Schema({
   email: {type: String, required: true, validate: emailValidators},
@@ -122,5 +118,11 @@ userSchema.pre('save', function(next){
     });
   };
 });
+
+userSchema.methods.comparePassword = function(password) {
+  return bcrypt.compareSync(password, this.password);
+}
+
+
 // Model
 module.exports = mongoose.model('User', userSchema);
